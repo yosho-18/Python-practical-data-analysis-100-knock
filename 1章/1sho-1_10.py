@@ -1,3 +1,5 @@
+# 1章_ウェブからの注文数を分析する１０本ノック（整ったデータ）
+
 import pandas as pd
 import matplotlib.pyplot as plt
 # %matplotlib inline
