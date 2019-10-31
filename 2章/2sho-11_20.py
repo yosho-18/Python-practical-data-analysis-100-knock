@@ -3,8 +3,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# %matplotlib inline
-
 
 # ノック１１：データを読み込んでみよう
 uriage_data = pd.read_csv("uriage.csv")
@@ -53,7 +51,7 @@ for trg in list(uriage_data.loc[flg_is_null, "item_name"].unique()):  # 条件�
     price = uriage_data.loc[(~flg_is_null) & (uriage_data["item_name"] == trg), "item_price"].max()  # ~：否定演算子，欠損していないデータから値段を引っ張ってくる
     uriage_data["item_price"].loc[(flg_is_null) & (uriage_data["item_name"] == trg)] = price  # 欠損しているところを埋める
 print(uriage_data.head())
-print(uriage_data.isnull().any(axis=0))  # 確認
+print(uriage_data.isnull().any(axis=0))  # 確認，縦
 
 for trg in list(uriage_data["item_name"].sort_values().unique()):
     print(trg + "の最大額" + str(uriage_data.loc[uriage_data["item_name"] == trg]["item_price"].max())
@@ -93,9 +91,40 @@ print(flg_is_serial.sum())  # 0
 
 
 # ノック１８：顧客名をキーに２つのデータを結合（ジョイン）しよう
+# left_onがuriage_data，right_onがkokyaku_dataに対応している．how="left"でuriage_dataが主になる．
+join_data = pd.merge(uriage_data, kokyaku_data, left_on="customer_name", right_on="顧客名", how="left")  # ２つのデータの別の列
+join_data = join_data.drop("customer_name", axis=1)  # customer_nameの列を削除（行の要素を消していくと考える？）
+print(join_data)
+"""クレンジング：分析に適したデータの形にすること"""
 
 
 # ノック１９：クレンジングしたデータをダンプしよう
+"""きれいにしたデータをファイルに出力（ダンプ）"""
+dump_data = join_data[["purchase_date", "purchase_month", "item_name", "item_price",
+                       "顧客名", "かな", "地域", "メールアドレス", "登録日"]]  # "purchase_date"と"purchase_month"を近くする
+print(dump_data)
+
+dump_data.to_csv("dump_data.csv", index=False)  # ファイル出力をする
 
 
 # ノック２０：データを集計しよう
+import_data = pd.read_csv("dump_data.csv")
+print(import_data)
+
+# 購入年月，商品の集計結果
+byItem = import_data.pivot_table(index="purchase_month", columns="item_name", aggfunc="size", fill_value=0)  # "purchase_month"：縦軸
+print(byItem)
+# 購入年月，売上金額の集計結果
+byPrice = import_data.pivot_table(index="purchase_month", columns="item_name", values="item_price", aggfunc="sum", fill_value=0)
+print(byPrice)
+# 購入年月，各顧客の購入数の集計結果
+byCustomer = import_data.pivot_table(index="purchase_month", columns="顧客名", aggfunc="size", fill_value=0)
+print(byCustomer)
+# 購入年月，地域における販売数の集計結果
+byRegion = import_data.pivot_table(index="purchase_month", columns="地域", aggfunc="size", fill_value=0)
+print(byRegion)
+# 集計期間内での離脱顧客（集計期間で購入していないユーザー）
+away_data = pd.merge(uriage_data, kokyaku_data, left_on="customer_name", right_on="顧客名", how="right")  # kokyaku_dataを主体としている
+# 購買を行っていない顧客は「顧客日」等がNaNで結合される
+p = away_data["purchase_date"].isnull()
+print(away_data[away_data["purchase_date"].isnull()][["顧客名", "メールアドレス", "登録日"]])  # "purchase_data"]がnullの客の情報を出力
