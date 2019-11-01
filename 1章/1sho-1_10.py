@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 # %matplotlib inline
 
+"""left-join，right-joinの詳細についてはAppendix①参照"""
 
 # ノック１：データを読み込んでみよう
 customer_master = pd.read_csv("customer_master.csv")
