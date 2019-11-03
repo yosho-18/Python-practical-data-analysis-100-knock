@@ -4,10 +4,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from dateutil.relativedelta import relativedelta
 import networkx as nx
-
+import numpy as np
 
 # ノック５１：物流に関するデータを読み込んでみよう
-factories = pd.read_csv("tbl_factory.csv", index_col=0)
+factories = pd.read_csv("tbl_factory.csv", index_col=0)  # 0列目をindex指定
 print(factories)
 
 warehouses = pd.read_csv("tbl_warehouse.csv", index_col=0)
@@ -138,21 +138,123 @@ plt.show()
 
 # ノック５６：輸送ルート情報を読み込んでみよう
 """ノック５１，ノック５２で見てきた物流データ（の簡略版）を用いて最適化を行うための実践的な流れを開設する"""
-df_tr = pd.read_csv('trans_route.csv', index_col="工場")  # 縦要素の上に「工場」と表示する
+df_tr = pd.read_csv('trans_route.csv', index_col="工場")  # 縦要素の上に「工場」と表示する，リンクの重み
 print(df_tr.head())  # あの倉庫からその工場はこれだけという情報を総当たり図で表示
 
 
 # ノック５７：輸送ルート情報からネットワークを可視化してみよう
-df_pos = pd.read_csv("trans_route_pos.csv")
+df_pos = pd.read_csv("trans_route_pos.csv")  # リンクの座標，左側に倉庫W，右側に工場Fが来る
 
 G = nx.Graph()
 
+# 頂点の設定
+for i in range(len(df_pos.columns)):
+    G.add_node(df_pos.columns[i])  # W1, W2, ..., F1, F2, ...
+
+# 辺の設定＆エッジの重みのリスト化
+num_pre = 0
+edge_weights = []
+size = 0.1
+for i in range(len(df_pos.columns)):
+    for j in range(len(df_pos.columns)):
+        if not (i == j):  # 同じもの同士は考えない
+            # 辺の追加
+            G.add_edge(df_pos.columns[i], df_pos.columns[j])  # とりあえず倉庫同士，工場同士のリンクも張る
+            # エッジの重みの追加
+            if num_pre < len(G.edges):  # i == jの時以外，必ずTrue
+                num_pre = len(G.edges)
+                weight = 0
+                if (df_pos.columns[i] in df_tr.columns) and (df_pos.columns[j] in df_tr.index):  # iが工場で，jが倉庫
+                    if df_tr[df_pos.columns[i]][df_pos.columns[j]]:  # 値が0でないならTrue
+                        weight = df_tr[df_pos.columns[i]][df_pos.columns[j]]
+                elif (df_pos.columns[j] in df_tr.columns) and (df_pos.columns[i] in df_tr.index):  # jが工場で，iが倉庫
+                    if df_tr[df_pos.columns[j]][df_pos.columns[i]]:  # 値が0でないならTrue
+                        weight = df_tr[df_pos.columns[j]][df_pos.columns[i]]
+                edge_weights.append(weight)
+
+# 座標の設定
+pos = {}
+for i in range(len(df_pos.columns)):
+    node = df_pos.columns[i]
+    pos[node] = (df_pos[node][0], df_pos[node][1])
+
+# 絵画
+nx.draw(G, pos, with_labels=True, font_size=16, node_size=1000,
+        node_color='k', font_color='w', width=edge_weights)
+
+# 表示
+plt.show()
+
+"""どの倉庫とどの工場の間に多くの輸送が行われているかがわかる，割とまんべんなくなっているので改善の余地あり？"""
 
 
-# ノック５８：
+# ノック５８：輸送コスト関数を作成しよう
+"""最適化問題，目的関数，制約条件"""
+"""仮説：輸送コストを下げられる効率的な輸送ルートがあるのではないか"""
+df_tc = pd.read_csv('trans_cost.csv', index_col="工場")
+
+# 輸送コスト関数
+def trans_cost(df_tr, df_tc):
+    cost = 0
+    for i in range(len(df_tc.index)):  # i：倉庫（indexは横）
+        for j in range(len(df_tr.columns)):  # j：工場（columnsは縦）
+            cost += df_tr.iloc[i][j] * df_tc.iloc[i][j]
+    return cost
+
+print("総輸送コスト：" + str(trans_cost(df_tr, df_tc)))  # 現在の総輸送コスト：1433万円
 
 
-# ノック５９：
+# ノック５９：制約条件を作ってみよう
+df_demand = pd.read_csv('demand.csv')
+df_supply = pd.read_csv('supply.csv')
+
+# 需要側（工場）の制約条件
+for i in range(len(df_demand.columns)):  # 工場が求めている（最低限必要な）受け入れる量
+    temp_sum = sum(df_tr[df_demand.columns[i]])  # F1, F2, ...（縦（倉庫W毎）にsumを取る）
+    print(str(df_demand.columns[i]) + "への輸送量" + str(temp_sum) + "（需要量" + str(df_demand.iloc[0][i]) + "）")
+    if temp_sum >= df_demand.iloc[0][i]:  # iloc：int型にしてる？
+        print("需要量を満たしています．")
+    else:
+        print("需要量を満たしていません．輸送ルートを再計算してください．")
 
 
-# ノック６０：
+# 供給側（倉庫）の制約条件
+for i in range(len(df_supply.columns)):  # 倉庫の（上限）出荷量
+    temp_sum = sum(df_tr.loc[df_supply.columns[i]])  # W1, W2, ...（横（工場F毎）にsumを取る），.locを使う
+    print(str(df_supply.columns[i]) + "からの輸送量" + str(temp_sum) + "（供給限界" + str(df_supply.iloc[0][i]) + "）")
+    # k = df_supply[0][i]
+    if temp_sum <= df_supply.iloc[0][i]:
+        print("供給限界の範囲内です．")
+    else:
+        print("供給限界を超過しています．輸送ルートを再計算してください．")
+
+
+# ノック６０：輸送ルートを変更して，輸送コスト関数の変化を確認しよう
+df_tr_new = pd.read_csv('trans_route_new.csv', index_col="工場")
+print(df_tr_new)
+
+# 総輸送コスト再計算
+print("総輸送コスト（変更後）：" + str(trans_cost(df_tr_new, df_tc)))
+
+# 制約条件計算関数
+
+# 需要側（工場）
+def condition_demand(df_tr, df_demand):
+    flag = np.zeros(len(df_demand.columns))  # F1, F2, F3, F4
+    for i in range(len(df_demand.columns)):
+        temp_sum = sum(df_tr[df_demand.columns[i]])  # F1, F2, ...（縦（倉庫W毎）にsumを取る）
+        if temp_sum >= df_demand.iloc[0][i]:  # 条件を満たせば1が入る
+            flag[i] = 1
+    return flag
+
+# 供給側（倉庫）
+def condition_supply(df_tr, df_supply):
+    flag = np.zeros(len(df_supply.columns))  # W1, W2, W3
+    for i in range(len(df_supply.columns)):
+        temp_sum = sum(df_tr.loc[df_supply.columns[i]])  # W1, W2, ...（横（工場F毎）にsumを取る）
+        if temp_sum <= df_supply.iloc[0][i]:
+            flag[i] = 1
+    return flag
+
+print("需要条件計算結果：" + str(condition_demand(df_tr_new, df_demand)))  # [1, 1, 1, 1]ならOK
+print("供給条件計算結果：" + str(condition_supply(df_tr_new, df_supply)))  # [1, 1, 1]ならOK
