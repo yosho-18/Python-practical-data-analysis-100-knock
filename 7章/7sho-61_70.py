@@ -6,8 +6,10 @@ from dateutil.relativedelta import relativedelta
 import numpy as np
 from itertools import product
 from pulp import LpVariable, lpSum, value  # 最適化モデルの作成を行う
-from ortoolpy import model_min, addvars, addvals  # 目的関数を生成
+from ortoolpy import model_min, model_max, addvars, addvals  # 目的関数を生成
 import networkx as nx
+
+"""最適化問題の詳細についてはAppendix③参照"""
 
 
 # ノック６１：輸送最適化問題を解いてみよう
@@ -84,20 +86,75 @@ plt.show()
 # 制約条件計算関数
 
 # 需要側（工場）の制約条件
+def condition_demand(df_tr, df_demand):
+    flag = np.zeros(len(df_demand.columns))  # F1, F2, F3, F4
+    for i in range(len(df_demand.columns)):
+        temp_sum = sum(df_tr[df_demand.columns[i]])  # F1, F2, ...（縦（倉庫W毎）にsumを取る）
+        if (temp_sum >= df_demand.iloc[0][i]):
+            flag[i] = 1
+    return flag
+
+# 供給側（倉庫）
+def condition_supply(df_tr, df_supply):
+    flag = np.zeros(len(df_supply.columns))  # W1, W2, W3
+    for i in range(len(df_supply.columns)):
+        temp_sum = sum(df_tr.loc[df_supply.columns[i]])  # W1, W2, ...（横（工場F毎）にsumを取る），行指定のため.locを使う
+        if temp_sum <= df_supply.iloc[0][i]:
+            flag[i] = 1
+    return flag
+
+print("需要条件計算結果：" + str(condition_demand(df_tr_sol, df_demand)))  # [1, 1, 1, 1]ならOK
+print("供給条件計算結果：" + str(condition_supply(df_tr_sol, df_supply)))  # [1, 1, 1]ならOK
+
+"""線形最適化の定式化できるものは比較的短時間に解を求めることができる"""
 
 
 
+# ノック６４：生産計画に関するデータを読み込んでみよう
+df_material = pd.read_csv('product_plan_material.csv', index_col="製品")
+print(df_material)
+df_profit = pd.read_csv('product_plan_plofit.csv', index_col="製品")
+print(df_profit)
+df_stock = pd.read_csv('product_plan_stock.csv', index_col="項目")
+print(df_stock)
+df_plan = pd.read_csv('product_plan.csv', index_col="製品")
+print(df_plan)
 
-# ノック６４：生産計画
+
+# ノック６５：利益を計算する関数を作ってみよう
+def product_plan(df_profit, df_plan):
+    profit = 0
+    for i in range(len(df_profit.index)):  # 製品１，製品２，i = 0, 1，利益
+        for j in range(len(df_plan.columns)):  # 生産量，j = 0
+            profit += df_profit.iloc[i][j] * df_plan.iloc[i][j]  # 利益 * 生産量
+    return profit
+
+print("総利益：" + str(product_plan(df_profit, df_plan)))  # 80万円
 
 
-# ノック６５：
+# ノック６６：生産最適化問題を解いてみよう
+df = df_material.copy()
+inv = df_stock
+
+# ノック６１と同じ流れ
+m = model_max()  # 最大化
+v1 = {(i): LpVariable('v%d%(i)', lowBound=0) for i in range(len(df_profit))}  # v1 = 製品１，製品２の個数v0, v1
+m += lpSum(df_profit.iloc[i] * v1[i] for i in range(len(df_profit)))  # 目的関数，利益 * 生産量
+for i in range(len(df_material.columns)):  # 原料１，原料２，原料３
+    m += lpSum(df_material.iloc[j, i] * v1[j] for j in range(len(df_profit))) \
+         <= df_stock.iloc[:, i]  # 制約条件，原料に対して製品が必要な原料を足していく，そのsumが在庫以下であることを条件にする
+m.solve()
+
+df_plan_sol = df_plan.copy()
+for k, x in v1.items():  # k = 0, 1，x = v0, v1
+    df_plan_sol.ilo[k] = value(x)  # v0, v1に関しての新たな生産計画を作る
+print(df_plan_sol)
+print("純利益：" + str(value(m.object)))  # value(m.object))で目的関数の値を出力
 
 
-# ノック６６：
+# ノック６７：最適生産計画が制約条件内に収まっているかどうかを確認しよう
+"""最適化計算を行った結果を「あの手この手で」理解する"""
 
-
-# ノック６７：
 
 
 # ノック６８：
