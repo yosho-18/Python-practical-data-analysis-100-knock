@@ -2,11 +2,10 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
-from dateutil.relativedelta import relativedelta
 import numpy as np
 from itertools import product
 from pulp import LpVariable, lpSum, value  # 最適化モデルの作成を行う
-from ortoolpy import model_min, model_max, addvars, addvals  # 目的関数を生成
+from ortoolpy import model_min, model_max, addvars, addvals, logistics_network  # 目的関数を生成
 import networkx as nx
 
 """最適化問題の詳細についてはAppendix③参照"""
@@ -149,18 +148,71 @@ df_plan_sol = df_plan.copy()
 for k, x in v1.items():  # k = 0, 1，x = v0, v1
     df_plan_sol.iloc[k] = value(x)  # v0, v1に関しての新たな生産計画を作る
 print(df_plan_sol)
-print("純利益：" + str(value(m.object)))  # value(m.object))で目的関数の値を出力
+print("純利益：" + str(value(m.objective)))  # value(m.objective)で目的関数の値を出力，95万
 
 
 # ノック６７：最適生産計画が制約条件内に収まっているかどうかを確認しよう
 """最適化計算を行った結果を「あの手この手で」理解する"""
+def condition_stock(df_plan, df_material, df_stock):
+    flag = np.zeros(len(df_material.columns))
+    for i in range(len(df_material.columns)):  # 原料１，原料２，原料３
+        temp_sum = 0
+        for j in range(len(df_material.index)):  # 製品１，製品２
+            temp_sum = temp_sum + df_material.iloc[j][i] \
+                       * float(df_plan.iloc[j])  # 製品jがdf_plan.iloc[j]個でそれに応じた１個当たりの原材料数をかける
+            if temp_sum <= float(df_stock.iloc[0][i]):  # 使われている原材料が，在庫を越えていないかチェック
+                flag[i] = 1
+            print(df_material.columns[i] + " 使用量：" + str(temp_sum) + "，在庫：" + str(float(df_stock.iloc[0][i])))
+    return flag
+print("制約条件計算結果：" + str(condition_stock(df_plan_sol, df_material, df_stock)))  # 原材料２，原材料３は全て使っている
 
 
+# ノック６８：ロジスティクスネットワーク問題を解いてみよう
+"""輸送コストと製造コストの和を最小化する，制約条件：各商店での販売数が需要数を上回ること"""
+製品 = list('AB')
+需要地 = list('PQ')
+工場 = list('XY')
+レーン = (2, 2)
 
-# ノック６８：
+# DataFrameを作っていく
+
+# 輸送費用 #
+tbdi = pd.DataFrame(((j, k) for j in 需要地 for k in 工場), columns=['需要地', '工場'])  # (P需要地, X工場), (P, Y), ...
+tbdi['輸送費'] = [1, 2, 3, 1]  # X工場からP需要地がコスト1
+print(tbdi)
+
+# 需要表 #
+tbde = pd.DataFrame(((j, i) for j in 需要地 for i in 製品), columns=['需要地', '工場'])  # (P需要地, A製品), (P, B), ...
+tbde['需要'] = [10, 10, 20, 20]  # P需要地はA製品を10個欲している
+print(tbde)
+
+# 生産表 #（工場とレーンと製品の組み合わせ）
+tbfa = pd.DataFrame(((k, l, i, 0, np.inf) for k, nl in zip(工場, レーン) for l in range(nl) for i in 製品),
+                    columns=['工場', 'レーン', '製品', '下限', '上限'])  # (X工場, 0, A製品, 0, np.inf), (X工場, 0, B製品, 0, np.inf)
+                    # , ..., (X工場, 1, A製品, 0, np.inf), ..., (Y工場, 0, A製品, 0, np.inf), ... 2*2*2=8個
+tbfa['生産費'] = [1, np.nan, np.nan, 1, 3, np.nan, 5, 3]  # 8個
+tbfa.dropna(inplace=True)  # 生産費nanのものは切り捨てる
+tbfa.loc[4, '上限'] = 10
+print(tbfa)
+
+_, tbdi2, _ = logistics_network(tbde, tbdi, tbfa)  # 需要，輸送費，生産，最適設計を行う
+print(tbfa)  # ValY：最適生産量
+print(tbdi2)  # ValX：最適輸送量
 
 
-# ノック６９：
+# ノック６９：最適ネットワークにおける輸送コストとその内訳を計算しよう
+print(tbdi2)
+trans_cost = 0
+for i in range(len(tbdi2.index)):
+    trans_cost += tbdi2["輸送費"].iloc[i] * tbdi2["ValX"].iloc[i]
+print("総輸送コスト：" + str(trans_cost))  # 80万円
 
 
-# ノック７０：
+# ノック７０：最適ネットワークにおける生産コストとその内訳を計算しよう
+print(tbfa)
+product_cost = 0
+for i in range(len(tbfa.index)):
+    product_cost += tbfa["生産費"].iloc[i] * tbfa["ValY"].iloc[i]
+print("総生産コスト：" + str(product_cost))  # 120万円
+
+"""最適化計算のライブラリは便利だが，鵜呑みにすると大けがをする．常に疑う姿勢を持つことが大事．"""
