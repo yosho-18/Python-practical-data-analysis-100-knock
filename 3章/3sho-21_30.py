@@ -1,7 +1,12 @@
-# 3章_顧客の全体像を把握する１０本ノック（結果を出す，機械学習，事前分析）
+# 3章_顧客の全体像を把握する１０本ノック（結果を出す，事前分析）
 
 import pandas as pd
 import matplotlib.pyplot as plt
+from dateutil.relativedelta import relativedelta  # 日付の比較に使用
+# 警告(worning)の非表示化
+import warnings
+warnings.filterwarnings('ignore')
+
 
 
 # ノック２１：データを読み込んで把握しよう
@@ -75,17 +80,44 @@ print(uselog_weekday.head())
 uselog_weekday = uselog_weekday.groupby("customer_id", as_index=False).max()[["customer_id", "count"]]  # 顧客毎に，各月の週ごとの最大値をとる
 # uselog_weekday = uselog_weekday.max()[["customer_id", "count"]]
 uselog_weekday["routine_flg"] = 0
-uselog_weekday["routing_flg"] = uselog_weekday["routine_flg"].where(uselog_weekday["count"] < 4, 1)  # whereで条件に当てはま「らない」ものに1を代入する
+uselog_weekday["routine_flg"] = uselog_weekday["routine_flg"].where(uselog_weekday["count"] < 4, 1)  # whereで条件に当てはま「らない」ものに1を代入する
 print(uselog_weekday.head())
 
 
 # ノック２７：顧客データと利用履歴データを結合しよう
+print(uselog_customer.head())
+print(uselog_weekday.head())
+print(customer_join.head())
+customer_join = pd.merge(customer_join, uselog_customer, on="customer_id", how="left")
+customer_join = pd.merge(customer_join, uselog_weekday[["customer_id", "routine_flg"]], on="customer_id", how="left")
+print(customer_join.head())
+print(customer_join.isnull().sum())
 
 
-# ノック２８：
+# ノック２８：会員期間を計算しよう
+customer_join["calc_date"] = customer_join["end_date"]
+customer_join["calc_date"] = customer_join["calc_date"].fillna(pd.to_datetime("20190430"))  # 欠損値に"20190430"を代入
+customer_join["membership_period"] = 0
+for i in range(len(customer_join)):
+    delta = relativedelta(customer_join["calc_date"].iloc[i], customer_join["start_date"].iloc[i])  # 差分を計算，ilocで行指定
+    customer_join["membership_period"].iloc[i] = delta.years * 12 + delta.months  # 月単位で算出
+print(customer_join.head())
 
 
-# ノック２９：
+"""利用履歴を加味した上で顧客の分析"""
+# ノック２９：顧客行動の各種統計量を把握しよう
+customer_join[["mean", "median", "max", "min"]].describe()  # 顧客一人あたり月平均５回通っている
+print(customer_join.groupby("routine_flg").count()["customer_id"])  # 0が779，1が3413
 
+plt.hist(customer_join["membership_period"])  # ヒストグラム，10か月以内に離れていく顧客が多い
+plt.show()
 
-# ノック３０：
+# ノック３０：退会ユーザーと継続ユーザーの違いを把握しよう
+
+customer_end = customer_join.loc[customer_join["is_deleted"] == 1]
+customer_end.describe()
+
+customer_stay = customer_join.loc[customer_join["is_deleted"] == 0]
+customer_stay.describe()
+
+customer_join.to_csv("customer_join.csv", index=False)

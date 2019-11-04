@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6adf42ae-d1b5-43a1-94b1-60792b9cb2be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/3章/3sho-21_30.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sho-1_0.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Python-practical-data-analysis-100-knock.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python-practical-data-analysis-100-knock.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2章/2sho-11_20.py" beforeDir="false" afterPath="$PROJECT_DIR$/2章/2sho-11_20.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2章/dump_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/2章/dump_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7章/7sho-61_70.py" beforeDir="false" afterPath="$PROJECT_DIR$/7章/7sho-61_70.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,39 +18,40 @@
     <session id="178352361">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.22" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="16" />
-          <entry key="ipynb" value="3" />
-          <entry key="py" value="4" />
+          <entry key="csv" value="36" />
+          <entry key="ipynb" value="8" />
+          <entry key="py" value="16" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="IPNB" value="3" />
-          <entry key="PLAIN_TEXT" value="17" />
-          <entry key="Python" value="4" />
+          <entry key="IPNB" value="8" />
+          <entry key="PLAIN_TEXT" value="37" />
+          <entry key="Python" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="10" />
           <entry key="dummy" value="3" />
-          <entry key="py" value="6222" />
+          <entry key="py" value="21703" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="13" />
-          <entry key="Python" value="6222" />
+          <entry key="Python" value="21703" />
         </counts>
       </usages-collector>
     </session>
@@ -85,37 +86,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1章/1sho-1_10.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="78" column="35" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2章/2sho-11_20.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/3章/3sho-21_30.py">
+        <entry file="file://$PROJECT_DIR$/7章/7sho-61_70.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
-              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="305">
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+              <folding>
+                <element signature="e#50#69#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/3章/use_log.csv">
+        <entry file="file://$PROJECT_DIR$/6章/6sho-51_60.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3355567" />
+            <state relative-caret-position="37">
+              <caret line="203" column="7" selection-start-line="203" selection-start-column="7" selection-end-line="203" selection-end-column="7" />
+              <folding>
+                <element signature="e#44#63#0" expanded="true" />
+                <marker date="1572769518378" expanded="true" signature="5891:6167" ph="..." />
+                <marker date="1572769518378" expanded="true" signature="7350:7641" ph="..." />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -138,15 +131,24 @@
         <option value="$PROJECT_DIR$/1章/transaction_1.csv" />
         <option value="$PROJECT_DIR$/1章/1-1_10.py" />
         <option value="$PROJECT_DIR$/2章/2sho-11_20.py" />
-        <option value="$PROJECT_DIR$/sho-1_0.py" />
-        <option value="$PROJECT_DIR$/1章/1sho-1_10.py" />
         <option value="$PROJECT_DIR$/3章/3sho-21_30.py" />
+        <option value="$PROJECT_DIR$/1章/1sho-1_10.py" />
+        <option value="$PROJECT_DIR$/sho-1_0.py" />
+        <option value="$PROJECT_DIR$/4章/4sho-31_40.py" />
+        <option value="$PROJECT_DIR$/5章/5sho-41_50.py" />
+        <option value="$PROJECT_DIR$/6章/6sho-51_60.py" />
+        <option value="$PROJECT_DIR$/7章/7sho-61_70.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
+<<<<<<< HEAD
     <option name="x" value="490" />
     <option name="y" value="-25" />
+=======
+    <option name="x" value="350" />
+    <option name="y" value="-24" />
+>>>>>>> 07ec533f79c3417ea70317dc1f9fc9b1b339c5f5
     <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
@@ -156,7 +158,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,24 +168,28 @@
             <path>
               <item name="Python-practical-data-analysis-100-knock" type="b2602c69:ProjectViewProjectNode" />
               <item name="Python-practical-data-analysis-100-knock" type="462c0819:PsiDirectoryNode" />
-              <item name="3章" type="462c0819:PsiDirectoryNode" />
+              <item name="7章" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DeepKoopman-master" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\u8149\OneDrive\ドキュメント\GitHub\Python-practical-data-analysis-100-knock\7章" />
+      <recent name="C:\Users\u8149\OneDrive\ドキュメント\GitHub\Python-practical-data-analysis-100-knock\6章" />
+      <recent name="C:\Users\u8149\OneDrive\ドキュメント\GitHub\Python-practical-data-analysis-100-knock\5章" />
+      <recent name="C:\Users\u8149\OneDrive\ドキュメント\GitHub\Python-practical-data-analysis-100-knock\4章" />
+      <recent name="C:\Users\u8149\OneDrive\ドキュメント\GitHub\Python-practical-data-analysis-100-knock\3章" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\u8149\OneDrive\ドキュメント\GitHub\Python-practical-data-analysis-100-knock" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\u8149\OneDrive\ドキュメント\GitHub\Python-practical-data-analysis-100-knock\3章" />
-      <recent name="C:\Users\u8149\OneDrive\ドキュメント\GitHub\Python-practical-data-analysis-100-knock\2章" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -199,70 +204,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.3sho-21_30">
-    <configuration name="1-1_10" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Python-practical-data-analysis-100-knock" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/1章" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\u8149\OneDrive\ドキュメント\GitHub\Python-practical-data-analysis-100-knock\1章\1sho-1_10.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="1sho-1_10" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Python-practical-data-analysis-100-knock" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/1章" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1章/1sho-1_10.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="2sho-11_20" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Python-practical-data-analysis-100-knock" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2章" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2章/2sho-11_20.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.7sho-61_70">
     <configuration name="3sho-21_30" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python-practical-data-analysis-100-knock" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -284,18 +226,104 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="4sho-31_40" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python-practical-data-analysis-100-knock" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/4章" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4章/4sho-31_40.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="5sho-41_50" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python-practical-data-analysis-100-knock" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/5章" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/5章/5sho-41_50.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="6sho-51_60" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python-practical-data-analysis-100-knock" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/6章" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/6章/6sho-51_60.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="7sho-61_70" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Python-practical-data-analysis-100-knock" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/7章" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/7章/7sho-61_70.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.1-1_10" />
-      <item itemvalue="Python.2sho-11_20" />
-      <item itemvalue="Python.1sho-1_10" />
       <item itemvalue="Python.3sho-21_30" />
+      <item itemvalue="Python.4sho-31_40" />
+      <item itemvalue="Python.5sho-41_50" />
+      <item itemvalue="Python.6sho-51_60" />
+      <item itemvalue="Python.7sho-61_70" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.7sho-61_70" />
+        <item itemvalue="Python.6sho-51_60" />
+        <item itemvalue="Python.5sho-41_50" />
+        <item itemvalue="Python.4sho-31_40" />
         <item itemvalue="Python.3sho-21_30" />
-        <item itemvalue="Python.1sho-1_10" />
-        <item itemvalue="Python.2sho-11_20" />
-        <item itemvalue="Python.1-1_10" />
       </list>
     </recent_temporary>
   </component>
@@ -313,10 +341,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+=======
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+>>>>>>> 07ec533f79c3417ea70317dc1f9fc9b1b339c5f5
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16239317" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1328859" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -331,8 +363,8 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Debug" order="3" weight="0.24966443" />
-      <window_info active="true" anchor="right" id="Run" order="4" visible="true" weight="0.29326922" />
+      <window_info active="true" anchor="right" id="Debug" order="3" visible="true" weight="0.24966443" />
+      <window_info anchor="right" id="Run" order="4" weight="0.30268458" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -343,7 +375,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/1章/1sho-1_10.py</url>
-          <line>18</line>
+          <line>19</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -360,6 +392,51 @@
           <url>file://$PROJECT_DIR$/2章/2sho-11_20.py</url>
           <line>128</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/3章/3sho-21_30.py</url>
+          <line>103</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/4章/4sho-31_40.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/4章/4sho-31_40.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/5章/5sho-41_50.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/5章/5sho-41_50.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/5章/5sho-41_50.py</url>
+          <line>83</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/6章/6sho-51_60.py</url>
+          <line>198</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/6章/6sho-51_60.py</url>
+          <line>223</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/7章/7sho-61_70.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -412,6 +489,41 @@
     <entry file="file://$PROJECT_DIR$/1章/item_master.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/3章/use_log.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3355567" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3章/class_master.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3章/customer_master.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3章/3章_顧客の全体像を把握する１０本ノック.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3章/3章_顧客の全体像を把握する１０本ノック_answer.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3章/customer_join.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4章/4章_顧客の行動を予測する１０本ノック_answer.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/1章/1章_ウェブからの注文数を分析する１０本ノック_answer.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -419,20 +531,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2章/dump_data.csv">
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pandas/util/_validators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5章/use_log_months.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5章/5sho-41_50.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="149" lean-forward="true" selection-start-line="149" selection-end-line="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4章/4sho-31_40.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/6章/network_pos.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/6章/network_weight.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/6章/trans_route_pos.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/6章/tbl_factory.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/6章/demand.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/6章/trans_cost.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/6章/trans_route_new.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/6章/trans_route.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7章/demand.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3章/3sho-21_30.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7章/supply.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/sho-1_0.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="68">
+          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+          <folding>
+            <element signature="e#3#22#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/1章/1sho-1_10.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="78" column="35" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
+        <state relative-caret-position="85">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -443,18 +620,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/3章/customer_master.csv">
+    <entry file="file://$PROJECT_DIR$/2章/dump_data.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/3章/use_log.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3355567" />
+    <entry file="file://$PROJECT_DIR$/7章/7章 ロジスティクスネットワークの最適設計を行う10本ノック_answer.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="5" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/3章/3sho-21_30.py">
+    <entry file="file://$PROJECT_DIR$/6章/6sho-51_60.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+        <state relative-caret-position="37">
+          <caret line="203" column="7" selection-start-line="203" selection-start-column="7" selection-end-line="203" selection-end-column="7" />
+          <folding>
+            <element signature="e#44#63#0" expanded="true" />
+            <marker date="1572769518378" expanded="true" signature="5891:6167" ph="..." />
+            <marker date="1572769518378" expanded="true" signature="7350:7641" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7章/7sho-61_70.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="e#50#69#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
