@@ -113,7 +113,7 @@ print("供給条件計算結果：" + str(condition_supply(df_tr_sol, df_supply)
 # ノック６４：生産計画に関するデータを読み込んでみよう
 df_material = pd.read_csv('product_plan_material.csv', index_col="製品")
 print(df_material)
-df_profit = pd.read_csv('product_plan_plofit.csv', index_col="製品")
+df_profit = pd.read_csv('product_plan_profit.csv', index_col="製品")
 print(df_profit)
 df_stock = pd.read_csv('product_plan_stock.csv', index_col="項目")
 print(df_stock)
@@ -138,7 +138,7 @@ inv = df_stock
 
 # ノック６１と同じ流れ
 m = model_max()  # 最大化
-v1 = {(i): LpVariable('v%d%(i)', lowBound=0) for i in range(len(df_profit))}  # v1 = 製品１，製品２の個数v0, v1
+v1 = {(i): LpVariable('v%d'%(i), lowBound=0) for i in range(len(df_profit))}  # v1 = 製品１，製品２の個数v0, v1
 m += lpSum(df_profit.iloc[i] * v1[i] for i in range(len(df_profit)))  # 目的関数，利益 * 生産量
 for i in range(len(df_material.columns)):  # 原料１，原料２，原料３
     m += lpSum(df_material.iloc[j, i] * v1[j] for j in range(len(df_profit))) \
@@ -147,7 +147,7 @@ m.solve()
 
 df_plan_sol = df_plan.copy()
 for k, x in v1.items():  # k = 0, 1，x = v0, v1
-    df_plan_sol.ilo[k] = value(x)  # v0, v1に関しての新たな生産計画を作る
+    df_plan_sol.iloc[k] = value(x)  # v0, v1に関しての新たな生産計画を作る
 print(df_plan_sol)
 print("純利益：" + str(value(m.object)))  # value(m.object))で目的関数の値を出力
 
