@@ -1,5 +1,6 @@
 #
-
+p = [[1,2,3], [9, 5]]
+print(p[:][])
 import pandas as pd
 import matplotlib.pyplot as plt
 from dateutil.relativedelta import relativedelta
