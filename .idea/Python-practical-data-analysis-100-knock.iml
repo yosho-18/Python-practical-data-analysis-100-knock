@@ -6,6 +6,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="DeepKoopman-master" />
     <orderEntry type="module" module-name="DeepKoopman-master" />
+    <orderEntry type="module" module-name="NODE-DDMD" />
+    <orderEntry type="module" module-name="PyTorch-Introduction_to_development" />
     <orderEntry type="module" module-name="Neural_Ordinary_Differential_Equations" />
   </component>
 </module>

@@ -3,6 +3,9 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$USER_HOME$/Documents/GitHub/Neural_Ordinary_Differential_Equations" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../DeepKoopman-master" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../NODE-DDMD" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Neural_Ordinary_Differential_Equations" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../PyTorch-Introduction_to_development" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Python-practical-data-analysis-100-knock" vcs="Git" />
   </component>
