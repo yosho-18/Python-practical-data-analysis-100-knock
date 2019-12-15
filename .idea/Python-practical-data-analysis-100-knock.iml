@@ -12,5 +12,7 @@
     <orderEntry type="module" module-name="NODE-DDMD" />
     <orderEntry type="module" module-name="AtCoder" />
     <orderEntry type="module" module-name="LeetCode" />
+    <orderEntry type="module" module-name="memo" />
+    <orderEntry type="module" module-name="DMD" />
   </component>
 </module>
