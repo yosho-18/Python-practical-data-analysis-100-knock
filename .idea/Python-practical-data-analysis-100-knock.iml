@@ -14,5 +14,6 @@
     <orderEntry type="module" module-name="LeetCode" />
     <orderEntry type="module" module-name="memo" />
     <orderEntry type="module" module-name="DMD" />
+    <orderEntry type="module" module-name="Neural_Ordinary_Differential_Equations" />
   </component>
 </module>
