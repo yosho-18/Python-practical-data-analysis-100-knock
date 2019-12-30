@@ -6,14 +6,15 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="DeepKoopman-master" />
     <orderEntry type="module" module-name="DeepKoopman-master" />
-    <orderEntry type="module" module-name="NODE-DDMD" />
     <orderEntry type="module" module-name="PyTorch-Introduction_to_development" />
     <orderEntry type="module" module-name="Neural_Ordinary_Differential_Equations" />
-    <orderEntry type="module" module-name="NODE-DDMD" />
     <orderEntry type="module" module-name="AtCoder" />
     <orderEntry type="module" module-name="LeetCode" />
     <orderEntry type="module" module-name="memo" />
     <orderEntry type="module" module-name="DMD" />
     <orderEntry type="module" module-name="Neural_Ordinary_Differential_Equations" />
+    <orderEntry type="module" module-name="DMD_using_NODE" />
+    <orderEntry type="module" module-name="DMD_using_NODE" />
+    <orderEntry type="module" module-name="NODE-DDMD" />
   </component>
 </module>
