@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../AtCoder/.idea/AtCoder.iml" filepath="$PROJECT_DIR$/../AtCoder/.idea/AtCoder.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DMD/.idea/DMD.iml" filepath="$PROJECT_DIR$/../DMD/.idea/DMD.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../../Desktop/大学院　研究/DMD_using_NODE/.idea/DMD_using_NODE.iml" filepath="$PROJECT_DIR$/../../../Desktop/大学院　研究/DMD_using_NODE/.idea/DMD_using_NODE.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DeepKoopman-master/.idea/DeepKoopman-master.iml" filepath="$PROJECT_DIR$/../DeepKoopman-master/.idea/DeepKoopman-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/../LeetCode/.idea/LeetCode.iml" filepath="$PROJECT_DIR$/../LeetCode/.idea/LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/../NODE-DDMD/.idea/NODE-DDMD.iml" filepath="$PROJECT_DIR$/../NODE-DDMD/.idea/NODE-DDMD.iml" />
