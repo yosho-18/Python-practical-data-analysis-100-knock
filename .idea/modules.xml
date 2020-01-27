@@ -3,13 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../AtCoder/.idea/AtCoder.iml" filepath="$PROJECT_DIR$/../AtCoder/.idea/AtCoder.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../DMD/.idea/DMD.iml" filepath="$PROJECT_DIR$/../DMD/.idea/DMD.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../DeepKoopman-master/.idea/DeepKoopman-master.iml" filepath="$PROJECT_DIR$/../DeepKoopman-master/.idea/DeepKoopman-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/../LeetCode/.idea/LeetCode.iml" filepath="$PROJECT_DIR$/../LeetCode/.idea/LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/../NODE-DDMD/.idea/NODE-DDMD.iml" filepath="$PROJECT_DIR$/../NODE-DDMD/.idea/NODE-DDMD.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Neural_Ordinary_Differential_Equations/.idea/Neural_Ordinary_Differential_Equations.iml" filepath="$PROJECT_DIR$/../Neural_Ordinary_Differential_Equations/.idea/Neural_Ordinary_Differential_Equations.iml" />
       <module fileurl="file://$PROJECT_DIR$/../PyTorch-Introduction_to_development/.idea/PyTorch-Introduction_to_development.iml" filepath="$PROJECT_DIR$/../PyTorch-Introduction_to_development/.idea/PyTorch-Introduction_to_development.iml" />
-      <module fileurl="file://$USER_HOME$/PycharmProjects/.idea/PycharmProjects.iml" filepath="$USER_HOME$/PycharmProjects/.idea/PycharmProjects.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Python-practical-data-analysis-100-knock.iml" filepath="$PROJECT_DIR$/.idea/Python-practical-data-analysis-100-knock.iml" />
       <module fileurl="file://$PROJECT_DIR$/../memo/.idea/memo.iml" filepath="$PROJECT_DIR$/../memo/.idea/memo.iml" />
     </modules>
