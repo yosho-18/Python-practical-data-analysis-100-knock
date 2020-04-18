@@ -11,5 +11,7 @@
     <orderEntry type="module" module-name="memo" />
     <orderEntry type="module" module-name="Neural_Ordinary_Differential_Equations" />
     <orderEntry type="module" module-name="NODE-DDMD" />
+    <orderEntry type="module" module-name="GCJ" />
+    <orderEntry type="module" module-name="Shukatsu_IT_test" />
   </component>
 </module>
