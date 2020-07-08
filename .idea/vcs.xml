@@ -9,12 +9,14 @@
     <mapping directory="$PROJECT_DIR$/../GCJ" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../LeetCode" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../NODE-DDMD" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../NODE-DDMD-apply" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../NODE-PF" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../Neural_Ordinary_Differential_Equations" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../PyTorch-Introduction_to_development" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Python-practical-data-analysis-100-knock" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../Shukatsu_IT_test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../UT_DS" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../memo" vcs="Git" />
     <mapping directory="$USER_HOME$/exam_3589205b3" vcs="Git" />
   </component>
