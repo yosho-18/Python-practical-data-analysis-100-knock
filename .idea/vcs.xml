@@ -10,6 +10,7 @@
     <mapping directory="$PROJECT_DIR$/../LeetCode" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../NODE-DDMD" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../NODE-DDMD-apply" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../NODE-Lorenz" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../NODE-PF" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../Neural_Ordinary_Differential_Equations" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../PyTorch-Introduction_to_development" vcs="Git" />

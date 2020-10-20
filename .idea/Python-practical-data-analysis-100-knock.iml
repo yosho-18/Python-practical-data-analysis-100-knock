@@ -16,5 +16,6 @@
     <orderEntry type="module" module-name="NODE-DDMD" />
     <orderEntry type="module" module-name="NODE-DDMD-apply" />
     <orderEntry type="module" module-name="UT_DS" />
+    <orderEntry type="module" module-name="NODE-Lorenz" />
   </component>
 </module>
