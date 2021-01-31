@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../AtCoder/.idea/AtCoder.iml" filepath="$PROJECT_DIR$/../AtCoder/.idea/AtCoder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SIGNATE/JR東日本_列車運行予測/.idea/JR東日本_列車運行予測.iml" filepath="$PROJECT_DIR$/../SIGNATE/JR東日本_列車運行予測/.idea/JR東日本_列車運行予測.iml" />
       <module fileurl="file://$PROJECT_DIR$/../NODE-DDMD/.idea/NODE-DDMD.iml" filepath="$PROJECT_DIR$/../NODE-DDMD/.idea/NODE-DDMD.iml" />
       <module fileurl="file://$PROJECT_DIR$/../NODE-DDMD-apply/.idea/NODE-DDMD-apply.iml" filepath="$PROJECT_DIR$/../NODE-DDMD-apply/.idea/NODE-DDMD-apply.iml" />
       <module fileurl="file://$PROJECT_DIR$/../NODE-Lorenz/.idea/NODE-Lorenz.iml" filepath="$PROJECT_DIR$/../NODE-Lorenz/.idea/NODE-Lorenz.iml" />
@@ -11,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Python-practical-data-analysis-100-knock.iml" filepath="$PROJECT_DIR$/.idea/Python-practical-data-analysis-100-knock.iml" />
       <module fileurl="file://$PROJECT_DIR$/../UT_DS/.idea/UT_DS.iml" filepath="$PROJECT_DIR$/../UT_DS/.idea/UT_DS.iml" />
       <module fileurl="file://$PROJECT_DIR$/../memo/.idea/memo.iml" filepath="$PROJECT_DIR$/../memo/.idea/memo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pyks/.idea/pyks.iml" filepath="$PROJECT_DIR$/../pyks/.idea/pyks.iml" />
     </modules>
   </component>
 </project>
