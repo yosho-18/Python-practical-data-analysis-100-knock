@@ -14,10 +14,10 @@
     <orderEntry type="module" module-name="NODE-DDMD" />
     <orderEntry type="module" module-name="NODE-DDMD" />
     <orderEntry type="module" module-name="NODE-DDMD" />
-    <orderEntry type="module" module-name="NODE-DDMD-apply" />
     <orderEntry type="module" module-name="UT_DS" />
     <orderEntry type="module" module-name="NODE-Lorenz" />
     <orderEntry type="module" module-name="pyks" />
     <orderEntry type="module" module-name="JR東日本_列車運行予測" />
+    <orderEntry type="module" module-name="NODE-DDMD-apply" />
   </component>
 </module>
